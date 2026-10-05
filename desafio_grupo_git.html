@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Desafio em Grupo — TechSustentável</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#14213d;--muted:#60708a;--blue:#1769d6;--dark:#0d4fa8;--green:#18864b;--border:#dbe4f0;--soft:#eaf3ff;--warn:#fff6db;--code:#101a2b}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
+header{padding:2.5rem clamp(1rem,5vw,4rem);color:#fff;background:linear-gradient(135deg,#0b2d5c,#1769d6)}
+.wrap,main{max-width:1150px;margin:auto}h1{font-size:clamp(2rem,5vw,3.6rem);margin:.6rem 0}header p{max-width:850px;line-height:1.6;color:#e9f2ff}
+.badge{display:inline-block;padding:.35rem .7rem;border-radius:999px;background:#ffffff20;font-weight:800;font-size:.8rem}
+.back{display:inline-block;margin-top:1rem;color:#fff;text-decoration:none;border:1px solid #ffffff55;padding:.7rem 1rem;border-radius:10px}
+main{padding:1.3rem}section{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.5rem;margin:1rem 0;box-shadow:0 14px 35px #14213d12}
+h2{margin-top:0}p,li{line-height:1.65}.lead{color:var(--muted)}
+.project{padding:1rem;border-left:5px solid var(--green);background:#eaf8f0;border-radius:12px}
+.warning{padding:1rem;border-left:5px solid #d59a10;background:var(--warn);border-radius:12px}
+.note{padding:1rem;border-left:5px solid var(--blue);background:var(--soft);border-radius:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.card{padding:1rem;border:1px solid var(--border);border-radius:12px;background:#fbfdff}
+.card strong{color:var(--dark)}pre{padding:1rem;border-radius:12px;background:var(--code);color:#d9e8ff;overflow:auto;white-space:pre-wrap}
+code{font-family:Consolas,monospace}table{width:100%;border-collapse:collapse}th,td{border:1px solid var(--border);padding:.8rem;text-align:left;vertical-align:top}th{background:var(--soft)}
+.steps{counter-reset:n;list-style:none;padding:0}.steps li{counter-increment:n;position:relative;padding:1rem 1rem 1rem 4rem;margin:.7rem 0;border:1px solid var(--border);border-radius:12px}
+.steps li:before{content:counter(n);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:bold}
+.check label{display:block;padding:.65rem;margin:.45rem 0;border:1px solid var(--border);border-radius:9px}.delivery{background:#f2ecff;border-left:5px solid #6b49c8;padding:1rem;border-radius:12px}
+footer{text-align:center;padding:2rem;color:var(--muted)}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="badge">DESAFIO COLABORATIVO • GIT E GITHUB</span>
+<h1>Projeto TechSustentável</h1>
+<p>Em grupo de três integrantes, vocês irão aplicar repositório compartilhado, branches individuais, commits, merge para a main e publicação com GitHub Pages.</p>
+<a class="back" href="index.html">← Voltar ao curso</a>
+</div></header>
+
+<main>
+<section>
+<h2>Proposta do projeto</h2>
+<div class="project"><strong>TechSustentável — Ideias Digitais para um Futuro Melhor</strong>
+<p>O grupo deverá criar um pequeno site sobre como a tecnologia pode contribuir para práticas sustentáveis no cotidiano, na escola, nas empresas e nas cidades.</p></div>
+<p class="lead">O objetivo principal é demonstrar o trabalho colaborativo com Git e GitHub. O site deverá funcionar, mas o histórico do repositório, as branches e os commits também fazem parte da atividade.</p>
+</section>
+
+<section>
+<h2>Formação do grupo</h2>
+<p>Formem um grupo com <strong>três integrantes</strong>. Um aluno será responsável por criar o repositório e compartilhar o acesso com os outros dois.</p>
+<div class="grid">
+<div class="card"><strong>Integrante 1</strong><p>Desenvolver <code>tecnologia.html</code>, apresentando tecnologias que podem contribuir para sustentabilidade.</p></div>
+<div class="card"><strong>Integrante 2</strong><p>Desenvolver <code>projetos.html</code>, apresentando ideias de projetos sustentáveis apoiados pela tecnologia.</p></div>
+<div class="card"><strong>Integrante 3</strong><p>Desenvolver <code>acoes.html</code>, apresentando ações práticas sustentáveis para pessoas, escolas ou empresas.</p></div>
+</div>
+</section>
+
+<section>
+<h2>1. Criar e compartilhar o repositório</h2>
+<ol class="steps">
+<li>Um integrante cria no GitHub um repositório chamado <code>techsustentavel</code>.</li>
+<li>Esse aluno adiciona os outros dois integrantes como colaboradores.</li>
+<li>Todos clonam o mesmo repositório em seus computadores.</li>
+</ol>
+<pre>git clone URL_DO_REPOSITORIO
+cd techsustentavel</pre>
+<div class="note"><strong>Atenção:</strong> o grupo terá apenas um repositório. Não devem ser criados três repositórios separados.</div>
+</section>
+
+<section>
+<h2>2. Criar uma branch para cada integrante</h2>
+<p>Cada aluno deverá criar uma branch utilizando o próprio primeiro nome. Exemplo para um grupo formado por Ana, Bruno e Carlos:</p>
+<pre>git switch -c ana
+git switch -c bruno
+git switch -c carlos</pre>
+<p>Cada integrante executa apenas o comando correspondente à sua branch. Em seguida, confira:</p>
+<pre>git branch</pre>
+<div class="warning">Antes de editar os arquivos, confirme que o asterisco <code>*</code> está ao lado da sua branch e não da <code>main</code>.</div>
+</section>
+
+<section>
+<h2>3. Cada integrante desenvolve sua página</h2>
+<table>
+<thead><tr><th>Integrante</th><th>Arquivo</th><th>Requisitos mínimos</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>tecnologia.html</code></td><td>Título, introdução, pelo menos 3 tecnologias e elemento visual.</td></tr>
+<tr><td>2</td><td><code>projetos.html</code></td><td>Pelo menos 3 ideias de projetos, descrição e benefícios.</td></tr>
+<tr><td>3</td><td><code>acoes.html</code></td><td>Pelo menos 5 ações práticas e explicação de cada uma.</td></tr>
+</tbody>
+</table>
+<p>Cada integrante deve realizar pelo menos <strong>dois commits</strong> na própria branch.</p>
+<pre>git status
+git add .
+git commit -m "Cria estrutura da minha pagina"
+git push -u origin NOME_DA_SUA_BRANCH</pre>
+</section>
+
+<section>
+<h2>4. Integrar as três branches na main</h2>
+<p>Quando as páginas estiverem prontas e enviadas ao GitHub, o grupo deverá fazer o merge de todas elas para a <code>main</code>.</p>
+<pre>git switch main
+git pull
+
+git merge ana
+git merge bruno
+git merge carlos
+
+git push origin main</pre>
+<div class="warning">Os nomes acima são apenas exemplos. Usem os nomes reais das branches do grupo. Se ocorrer conflito, o grupo deverá analisá-lo e resolvê-lo antes de concluir o merge.</div>
+</section>
+
+<section>
+<h2>5. Criar a página principal</h2>
+<p>Depois dos merges, um integrante ficará responsável por criar ou finalizar o arquivo <code>index.html</code>. Ele será a página inicial do projeto.</p>
+<p>O <code>index.html</code> deverá:</p>
+<ul>
+<li>apresentar o nome <strong>TechSustentável</strong>;</li>
+<li>explicar a proposta do site;</li>
+<li>mostrar os nomes dos três integrantes;</li>
+<li>conter links para <code>tecnologia.html</code>, <code>projetos.html</code> e <code>acoes.html</code>;</li>
+<li>possuir organização visual coerente com o restante do site.</li>
+</ul>
+<pre>&lt;nav&gt;
+  &lt;a href="tecnologia.html"&gt;Tecnologia&lt;/a&gt;
+  &lt;a href="projetos.html"&gt;Projetos&lt;/a&gt;
+  &lt;a href="acoes.html"&gt;Ações Sustentáveis&lt;/a&gt;
+&lt;/nav&gt;</pre>
+</section>
+
+<section>
+<h2>6. Publicar com GitHub Pages</h2>
+<ol class="steps">
+<li>Confiram se os arquivos finais estão na branch <code>main</code>.</li>
+<li>Abram as configurações do repositório.</li>
+<li>Acessem a opção de publicação do GitHub Pages.</li>
+<li>Configurem a publicação utilizando a branch <code>main</code>.</li>
+<li>Após a publicação, abram o endereço público e testem todos os links.</li>
+</ol>
+<div class="delivery"><strong>Entrega:</strong>
+<p>Ao término, <strong>apenas um integrante do grupo</strong> deverá enviar na atividade o <strong>link público gerado pelo GitHub Pages</strong>.</p>
+<p>Os outros integrantes não precisam enviar o mesmo link. O professor poderá verificar no repositório as branches, os commits e a participação de cada componente.</p>
+</div>
+</section>
+
+<section>
+<h2>Checklist do grupo</h2>
+<div class="check">
+<label><input type="checkbox"> O grupo tem três integrantes.</label>
+<label><input type="checkbox"> Foi criado um único repositório compartilhado.</label>
+<label><input type="checkbox"> Cada integrante criou uma branch com seu nome.</label>
+<label><input type="checkbox"> Cada integrante desenvolveu sua página na própria branch.</label>
+<label><input type="checkbox"> Cada integrante fez pelo menos dois commits.</label>
+<label><input type="checkbox"> As três branches foram integradas à main.</label>
+<label><input type="checkbox"> O index.html possui links para as três páginas.</label>
+<label><input type="checkbox"> O site foi testado após o merge.</label>
+<label><input type="checkbox"> O site foi publicado com GitHub Pages.</label>
+<label><input type="checkbox"> Um integrante enviou o link público na atividade.</label>
+</div>
+</section>
+
+<section>
+<h2>O que será observado</h2>
+<table>
+<thead><tr><th>Critério</th><th>Verificação</th></tr></thead>
+<tbody>
+<tr><td>Git e GitHub</td><td>Repositório, branches, commits, push e histórico.</td></tr>
+<tr><td>Participação individual</td><td>Cada estudante trabalhou na própria branch.</td></tr>
+<tr><td>Integração</td><td>As três páginas foram integradas corretamente à main.</td></tr>
+<tr><td>Página principal</td><td>O index.html permite acessar as três páginas.</td></tr>
+<tr><td>Publicação</td><td>O site está disponível por GitHub Pages.</td></tr>
+</tbody>
+</table>
+</section>
+</main>
+<footer>Desafio em Grupo — Curso de Versionamento com Git e GitHub</footer>
+</body>
+</html>
